@@ -10,10 +10,10 @@ A modern, responsive data storage component built as a solution to the Frontend 
 ## 📸 Screenshots
 
 ### Mobile View (375px)
-![Mobile View](./images/bg-mobile.png)
+![Mobile View](./screenshots/Mobile-screenshot.png)
 
 ### Desktop View (1440px)
-![Desktop View](./images/bg-desktop.png)
+![Desktop View](./screenshots/Desktop-screenshot.png)
 
 ## 🛠️ Built With
 
@@ -49,24 +49,27 @@ Replaced DOM elements with pseudo-elements for better performance:
   position: absolute;
   /* ... creates the white circle on progress bar */
 }
+```
 
 ### Semantic HTML
 Used proper ARIA roles for dynamic content:
 
-html
+```html
 <div class="storage-bar"
 role="progressbar"
 aria-valuenow="81.5"
 aria-valuemin="0"
 aria-valuemax="100">
+```
 
 ### Responsive Strategy
 Single breakpoint at 768px using `em` units for accessibility:
 
-css
+```css
 @media (min-width: 48em) {
   /* Desktop layout switches from vertical to horizontal */
 }
+```
 
 ## 🚀 Performance Metrics
 
@@ -76,7 +79,6 @@ css
 - **CSS Bundle Size**: 2.1KB (minified)
 
 ## 📁 Project Structure
-
 
 fylo-storage-component/
 ├── images/
@@ -109,12 +111,13 @@ Statistically 60%+ traffic is mobile. Progressive enhancement ensures core funct
 **Problem**: Creating the triangle without images
 **Solution**: Used `::after` with transparent borders:
 
-css
+```css
 .storage-left::after {
   border: 1.25rem solid transparent;
   border-top-color: var(--clr-white);
   border-right-color: var(--clr-white);
 }
+```
 
 ### Challenge 2: Progress Bar Responsiveness
 **Problem**: Maintaining visual consistency across screen sizes
@@ -154,8 +157,6 @@ Based in Amol, Iran 🇮🇷
 Learning every day to move smarter, not faster.
 
 - 🌐 [GitHub](https://github.com/Mehdi-dev-sudo)
-- 🐦 [Twitter/X](https://twitter.com/Mehdi_ds_kH)
-- 💼 [LinkedIn](https://linkedin.com/in/mehdi-khorshidi)
 - 📧 mehdi.khorshidi333@gmail.com
 
 ## 📝 License
