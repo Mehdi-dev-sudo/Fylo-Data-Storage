@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* ===== Variables ===== */
+:root {
+  --clr-gradient-start: hsl(6, 100%, 80%);
+  --clr-gradient-end: hsl(335, 100%, 65%);
+  --clr-pale-blue: hsl(243, 100%, 93%);
+  --clr-gray-blue: hsl(229, 7%, 55%);
+  --clr-dark-blue: hsl(228, 56%, 26%);
+  --clr-darker-blue: hsl(229, 57%, 11%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --radius-sm: 0.625rem;
+  --radius-pill: 6.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2.5rem;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ===== Base ===== */
+body {
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.875rem;
+  color: var(--clr-pale-blue);
+  background: var(--clr-darker-blue) url(images/bg-mobile.png) no-repeat top
+    center / cover;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 100%;
+  max-width: 20.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--clr-dark-blue);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-lg);
+}
+
+.card-left {
+  border-top-right-radius: var(--radius-pill);
+}
+
+.card-right {
+  padding-bottom: 3.25rem;
+  position: relative;
+}
+
+/* ===== Logo & Actions ===== */
+.logo {
+  width: 8.4375rem;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.icon-box {
+  width: 3rem;
+  height: 3rem;
+  background: var(--clr-darker-blue);
+  border: 0;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s;
+}
+
+.icon-box:hover,
+.icon-box:focus-visible {
+  background: hsl(229, 57%, 15%);
+  outline: 2px solid var(--clr-pale-blue);
+  outline-offset: 2px;
+}
+
+/* ===== Storage Info ===== */
+.storage-info p {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.storage-info strong {
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.storage-bar {
+  height: 1.25rem;
+  background: var(--clr-darker-blue);
+  border-radius: var(--radius-pill);
+  padding: 0.1875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.fill {
+  width: 81.5%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--clr-gradient-start),
+    var(--clr-gradient-end)
+  );
+  border-radius: inherit;
+  position: relative;
+}
+
+.fill::after {
+  content: '';
+  position: absolute;
+  right: 0.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.625rem;
+  height: 0.625rem;
+  background: var(--clr-white);
+  border-radius: 50%;
+}
+
+.storage-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ===== Storage Left Indicator ===== */
+.storage-left {
+  position: absolute;
+  left: 50%;
+  bottom: -2.25rem;
+  transform: translateX(-50%);
+  background: var(--clr-white);
+  color: var(--clr-gray-blue);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.storage-left strong {
+  font-size: 2.5rem;
+  color: var(--clr-darker-blue);
+  line-height: 1;
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 48em) {
+  body {
+    background-image: url(images/bg-desktop.png);
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+
+  .container {
+    max-width: 57.5rem;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1.875rem;
+  }
+
+  .card-left {
+    flex: 0 0 21.875rem;
+  }
+
+  .card-right {
+    flex: 1;
+    padding: var(--spacing-lg);
+  }
+
+  .storage-info p {
+    text-align: left;
+  }
+
+  .storage-left {
+    left: auto;
+    right: 2.5rem;
+    top: -3rem;
+    bottom: auto;
+    transform: none;
+  }
+
+  .storage-left::after {
+    content: '';
+    position: absolute;
+    bottom: -1.25rem;
+    right: 0;
+    border: 1.25rem solid transparent;
+    border-top-color: var(--clr-white);
+    border-right-color: var(--clr-white);
+  }
+}
