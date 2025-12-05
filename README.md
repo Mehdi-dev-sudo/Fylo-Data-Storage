@@ -4,7 +4,7 @@ A modern, responsive data storage component built as a solution to the Frontend 
 
 ## 🔗 Links
 
-- **Live Demo**: [GitHub Pages](https://mehdi-dev-sudo.github.io/fylo-storage-component/)
+- **Live Demo**: [GitHub Pages](https://mehdi-dev-sudo.github.io/Fylo-Data-Storage/)
 - **Challenge**: [Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n)
 
 ## 📸 Screenshots
