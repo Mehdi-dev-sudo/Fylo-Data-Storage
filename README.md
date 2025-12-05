@@ -79,6 +79,7 @@ Single breakpoint at 768px using `em` units for accessibility:
 - **CSS Bundle Size**: 2.1KB (minified)
 
 ## 📁 Project Structure
+```
 
 fylo-storage-component/
 ├── images/
@@ -93,6 +94,7 @@ fylo-storage-component/
 ├── style.css
 ├── README.md
 └── screenshot.png
+```
 
 ## 🔍 Design Decisions
 
